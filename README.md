@@ -1,63 +1,19 @@
-# Elearn Frontend (React)
+# Elearn Frontend 🚀
 
-This is the frontend for the **Elearn Portal**, built using **React.js**. It provides a clean UI to display courses and their lessons.
-
----
-
-## 🚀 Setup Instructions
-
-### **1️⃣ Prerequisites**
-
-Ensure you have the following installed:
-
-- **Node.js (LTS Version)** → [Download Here](https://nodejs.org/)
-- **npm** (comes with Node.js) or **yarn** → [Download Here](https://classic.yarnpkg.com/lang/en/docs/install/)
+This repository contains the **frontend application** for the Elearn project, containerized with Docker for easy deployment and local testing.
 
 ---
 
-### **2️⃣ Clone the Repository**
-
-```sh
-git clone https://github.com/your-repo/elearn-frontend.git
-cd elearn-frontend
-```
+## 📦 Prerequisites
+- [Docker](https://docs.docker.com/get-docker/) installed on your system
+- Basic knowledge of Docker commands
 
 ---
 
-### **3️⃣ Install Dependencies**
+## ▶️ Run Locally with Docker
 
-```sh
-npm install  # or yarn install
-```
+To start the frontend application inside a Docker container:
 
----
-
-### **4️⃣ Configure API Endpoint**
-
-Find and update the API URL in `AddNewCourse.js` and `Home.js`.
-
----
-
-### **5️⃣ Run Build**
-
-```sh
-npm run build
-```
----
-
-## 📁 Project Structure
-
-```plaintext
-📂 elearn-frontend
- ├── 📂 src
- │   ├── 📂 components  # Reusable components
- │   ├── 📂 pages       # Pages (Home, About, Contact, etc.)
- │   ├── 📂 services    # API calls
- │   ├── 📂 assets      # Images, logos, styles
- │   ├── App.js        # Main App component
- │   ├── index.js      # Entry point
- ├── 📄 .env           # API configuration
- ├── 📄 package.json   # Dependencies and scripts
- ├── 📄 README.md      # Project documentation
-```
-
+```bash
+docker build -t elearn-frontend .
+docker run -d -p 8080:80 --name elearn-frontend-container elearn-frontend
