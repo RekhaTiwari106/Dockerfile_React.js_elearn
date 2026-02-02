@@ -1,2 +1,19 @@
-# Dockerfile_React.js_elearn
-- Launches the Elearn frontend application inside Docker. The container is named elearn-frontend-container and can be accessed locally via port 8080.
+# Elearn Frontend 🚀
+
+This repository contains the **frontend application** for the Elearn project, containerized with Docker for easy deployment and local testing.
+
+---
+
+## 📦 Prerequisites
+- [Docker](https://docs.docker.com/get-docker/) installed on your system
+- Basic knowledge of Docker commands
+
+---
+
+## ▶️ Run Locally with Docker
+
+To start the frontend application inside a Docker container:
+
+```bash
+docker build -t elearn-frontend .
+docker run -d -p 8080:80 --name elearn-frontend-container elearn-frontend
